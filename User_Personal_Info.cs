@@ -62,6 +62,7 @@ namespace Billing_System
         {
             if (MessageBox.Show("注销此账号?", "系统提示", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
+                MessageBox.Show("asdf");
                 label.Text = "未登录";
                 string path = System.AppDomain.CurrentDomain.SetupInformation.ApplicationBase+"Form_pictrue\\ch06.png";
                 pictureBox.Load(path);// = Image.FromFile(path);
