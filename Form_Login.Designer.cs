@@ -28,25 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.metroButton1 = new MetroFramework.Controls.MetroButton();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
-            // metroButton1
+            // comboBox1
             // 
-            this.metroButton1.Location = new System.Drawing.Point(370, 172);
-            this.metroButton1.Name = "metroButton1";
-            this.metroButton1.Size = new System.Drawing.Size(136, 78);
-            this.metroButton1.TabIndex = 0;
-            this.metroButton1.Text = "添加按钮";
-            this.metroButton1.UseSelectable = true;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(181, 122);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(203, 32);
+            this.comboBox1.TabIndex = 1;
             // 
             // Form_Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(925, 558);
-            this.Controls.Add(this.metroButton1);
+            this.ClientSize = new System.Drawing.Size(639, 526);
+            this.Controls.Add(this.comboBox1);
+            this.Font = new System.Drawing.Font("微软雅黑", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Form_Login";
+            this.Padding = new System.Windows.Forms.Padding(28, 96, 28, 32);
             this.Text = "登录";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
@@ -54,8 +57,7 @@
         }
 
         #endregion
-
-        private MetroFramework.Controls.MetroButton metroButton1;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
 
