@@ -7,3 +7,12 @@ D:\Project\Billing-System\obj\Debug\Billing-System.csproj.GenerateResource.cache
 D:\Project\Billing-System\obj\Debug\Billing-System.csproj.CoreCompileInputs.cache
 D:\Project\Billing-System\obj\Debug\Billing-System.exe
 D:\Project\Billing-System\obj\Debug\Billing-System.pdb
+D:\Project\Github project\bin\Debug\Billing-System.exe.config
+D:\Project\Github project\bin\Debug\Billing-System.exe
+D:\Project\Github project\bin\Debug\Billing-System.pdb
+D:\Project\Github project\obj\Debug\Billing-System.csprojAssemblyReference.cache
+D:\Project\Github project\obj\Debug\Billing_System.Properties.Resources.resources
+D:\Project\Github project\obj\Debug\Billing-System.csproj.GenerateResource.cache
+D:\Project\Github project\obj\Debug\Billing-System.csproj.CoreCompileInputs.cache
+D:\Project\Github project\obj\Debug\Billing-System.exe
+D:\Project\Github project\obj\Debug\Billing-System.pdb
