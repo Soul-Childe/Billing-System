@@ -21,5 +21,10 @@ namespace Billing_System
         {
 
         }
+
+        private void myButton1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("adf");
+        }
     }
 }

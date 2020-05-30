@@ -99,6 +99,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="MyControls\MyControls.csproj">
+      <Project>{A600EC94-B12F-4833-88CE-838D4175763A}</Project>
+      <Name>MyControls</Name>
+    </ProjectReference>
     <ProjectReference Include="System.BLL\System.BLL.csproj">
       <Project>{e4c469f4-863a-4368-a417-253f35e40ee3}</Project>
       <Name>System.BLL</Name>
