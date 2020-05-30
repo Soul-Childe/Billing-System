@@ -69,6 +69,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="User_Personal_Info.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User_Personal_Info.Designer.cs">
+      <DependentUpon>User_Personal_Info.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form_Login.resx">
       <DependentUpon>Form_Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -111,6 +117,15 @@
       <Project>{ef53b32a-90ed-44c0-8299-e968ad46b9b0}</Project>
       <Name>System.Model</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Form_pictrue\ch01.png" />
+    <Content Include="Form_pictrue\ch02.png" />
+    <Content Include="Form_pictrue\ch03.png" />
+    <Content Include="Form_pictrue\ch04.png" />
+    <Content Include="Form_pictrue\ch05.png" />
+    <Content Include="Form_pictrue\ch06.jpg" />
+    <Content Include="Form_pictrue\man.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
