@@ -29,3 +29,4 @@ D:\Project\Github project\bin\Debug\MetroFramework.Fonts.dll
 D:\Project\Github project\obj\Debug\Billing_System.Form_Login.resources
 D:\Project\Github project\bin\Debug\MyControls.dll
 D:\Project\Github project\bin\Debug\MyControls.pdb
+D:\Project\Github project\obj\Debug\Billing_System.User_Personal_Info.resources

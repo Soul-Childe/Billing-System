@@ -86,6 +86,8 @@
             this.label3.Text = "label3";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label3.Click += new System.EventHandler(this.label_Click);
+            this.label3.MouseLeave += new System.EventHandler(this.label_MouseLeave);
+            this.label3.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label_MouseMove);
             // 
             // label4
             // 
@@ -100,6 +102,8 @@
             this.label4.Text = "label3";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label4.Click += new System.EventHandler(this.label_Click);
+            this.label4.MouseLeave += new System.EventHandler(this.label_MouseLeave);
+            this.label4.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label_MouseMove);
             // 
             // label5
             // 
@@ -114,9 +118,12 @@
             this.label5.Text = "label3";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label5.Click += new System.EventHandler(this.label_Click);
+            this.label5.MouseLeave += new System.EventHandler(this.label_MouseLeave);
+            this.label5.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label_MouseMove);
             // 
             // pictureBox2
             // 
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(79, 81);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(0);
@@ -125,6 +132,7 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label1
             // 
@@ -152,6 +160,7 @@
             // label2
             // 
             this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label2.Font = new System.Drawing.Font("微软雅黑", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label2.Location = new System.Drawing.Point(0, 139);
@@ -160,13 +169,16 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "奋斗蚂蚁";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.panel2.Location = new System.Drawing.Point(222, 28);
+            this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.Font = new System.Drawing.Font("隶书", 5.4F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.panel2.ForeColor = System.Drawing.Color.Black;
+            this.panel2.Location = new System.Drawing.Point(222, 33);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(738, 565);
+            this.panel2.Size = new System.Drawing.Size(738, 560);
             this.panel2.TabIndex = 1;
             // 
             // Form_Login

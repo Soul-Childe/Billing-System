@@ -21,7 +21,7 @@ namespace Billing_System
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            SetPictrue();            
+            SetPictrue(pictureBox2);            
         }
 
 
@@ -36,12 +36,12 @@ namespace Billing_System
         /// <summary>
         /// 设置图片框为圆形方法
         /// </summary>
-        private void SetPictrue()
+        private void SetPictrue(PictureBox pictureBox)
         {
             GraphicsPath gp = new GraphicsPath();
-            gp.AddEllipse(this.pictureBox2.ClientRectangle);
+            gp.AddEllipse(pictureBox.ClientRectangle);
             Region region = new Region(gp);
-            this.pictureBox2.Region = region;
+            pictureBox.Region = region;
             gp.Dispose();
             region.Dispose();
         }
@@ -64,6 +64,28 @@ namespace Billing_System
                     label.ForeColor = Color.LightGray;
                 }
             } 
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            User_Personal_Info user_Personal_Info = new User_Personal_Info();
+            user_Personal_Info.Dock = DockStyle.Fill;
+            user_Personal_Info.width = panel2.Width;
+            user_Personal_Info.label = label2;
+            user_Personal_Info.pictureBox = pictureBox2;
+            panel2.Controls.Add(user_Personal_Info);
+        }
+
+        private void label_MouseMove(object sender, MouseEventArgs e)
+        {
+            Label label = ((Label)sender);
+            label.ForeColor = Color.White;
+        }
+
+        private void label_MouseLeave(object sender, EventArgs e)
+        {
+            Label label = ((Label)sender);
+            label.ForeColor = Color.LightGray;
         }
     }
 }
