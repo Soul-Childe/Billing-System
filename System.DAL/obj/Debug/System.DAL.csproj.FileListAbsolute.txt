@@ -1,0 +1,9 @@
+D:\Project\Github project\System.DAL\bin\Debug\System.DAL.dll
+D:\Project\Github project\System.DAL\bin\Debug\System.DAL.pdb
+D:\Project\Github project\System.DAL\bin\Debug\System.Model.dll
+D:\Project\Github project\System.DAL\bin\Debug\System.Model.pdb
+D:\Project\Github project\System.DAL\obj\Debug\System.DAL.csprojAssemblyReference.cache
+D:\Project\Github project\System.DAL\obj\Debug\System.DAL.csproj.CoreCompileInputs.cache
+D:\Project\Github project\System.DAL\obj\Debug\System.DAL.csproj.CopyComplete
+D:\Project\Github project\System.DAL\obj\Debug\System.DAL.dll
+D:\Project\Github project\System.DAL\obj\Debug\System.DAL.pdb
