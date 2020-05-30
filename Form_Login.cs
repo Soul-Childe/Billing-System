@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Billing_System
 {
-    public partial class Form1 : MetroFramework.Forms.MetroForm
+    public partial class Form_Login : MetroFramework.Forms.MetroForm
     {
-        public Form1()
+        public Form_Login()
         {
             InitializeComponent();
         }

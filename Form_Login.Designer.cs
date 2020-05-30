@@ -1,6 +1,6 @@
 ﻿namespace Billing_System
 {
-    partial class Form1
+    partial class Form_Login
     {
         /// <summary>
         /// 必需的设计器变量。
@@ -28,15 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.SuspendLayout();
             // 
-            // Form1
+            // metroButton1
+            // 
+            this.metroButton1.Location = new System.Drawing.Point(370, 172);
+            this.metroButton1.Name = "metroButton1";
+            this.metroButton1.Size = new System.Drawing.Size(136, 78);
+            this.metroButton1.TabIndex = 0;
+            this.metroButton1.Text = "添加按钮";
+            this.metroButton1.UseSelectable = true;
+            // 
+            // Form_Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(918, 528);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.ClientSize = new System.Drawing.Size(925, 558);
+            this.Controls.Add(this.metroButton1);
+            this.Name = "Form_Login";
+            this.Text = "登录";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
 
@@ -44,6 +55,7 @@
 
         #endregion
 
+        private MetroFramework.Controls.MetroButton metroButton1;
     }
 }
 

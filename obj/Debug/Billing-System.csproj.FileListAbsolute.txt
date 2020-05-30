@@ -21,9 +21,9 @@ D:\Project\Github project\bin\Debug\System.BLL.dll
 D:\Project\Github project\bin\Debug\System.Model.dll
 D:\Project\Github project\bin\Debug\System.BLL.pdb
 D:\Project\Github project\bin\Debug\System.Model.pdb
-D:\Project\Github project\obj\Debug\Billing_System.Form1.resources
 D:\Project\Github project\obj\Debug\Billing_System.Form2.resources
 D:\Project\Github project\obj\Debug\Billing-System.csproj.CopyComplete
 D:\Project\Github project\bin\Debug\MetroFramework.Design.dll
 D:\Project\Github project\bin\Debug\MetroFramework.dll
 D:\Project\Github project\bin\Debug\MetroFramework.Fonts.dll
+D:\Project\Github project\obj\Debug\Billing_System.Form_Login.resources
