@@ -62,7 +62,7 @@ namespace System.DAL
         /// </summary>
         /// <param name="strsql"></param>
         /// <param name="sqls"></param>
-        /// <returns></returns>
+        /// <returns></returns> 
         public static int ExecuteNonQuery(string strsql, SqlParameter[] sqls)
         {
             int count = 0;
