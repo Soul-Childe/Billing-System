@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing.Drawing2D;
+using System.BLL;
+using System.Diagnostics;
 
 namespace Billing_System
 {
@@ -22,6 +24,7 @@ namespace Billing_System
         public Label label;
         public PictureBox pictureBox;
         #endregion
+
         #region 布局方法
         /// <summary>
         /// 布局方法
@@ -57,6 +60,13 @@ namespace Billing_System
         }
         #endregion
 
+        #region 修改个人信息
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Process.Start("http://www.baidu.com");
+        }
+        #endregion
+
         #region 退出账号
         private void button2_Click(object sender, EventArgs e)
         {
@@ -69,5 +79,6 @@ namespace Billing_System
             }
         }
         #endregion
+
     }
 }

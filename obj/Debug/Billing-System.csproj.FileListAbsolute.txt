@@ -29,3 +29,5 @@ D:\Project\Github project\obj\Debug\Billing-System.csproj.CoreCompileInputs.cach
 D:\Project\Github project\obj\Debug\Billing-System.csproj.CopyComplete
 D:\Project\Github project\obj\Debug\Billing-System.exe
 D:\Project\Github project\obj\Debug\Billing-System.pdb
+D:\Project\Github project\bin\Debug\System.DAL.dll
+D:\Project\Github project\bin\Debug\System.DAL.pdb

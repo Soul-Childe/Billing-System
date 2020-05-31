@@ -26,7 +26,7 @@ namespace System.DAL
         {
             get
             {
-                SqlConnection connection = new SqlConnection();
+                SqlConnection connection = new SqlConnection(sqlconn);
                 connection.Open();
                 if(connection.State==ConnectionState.Broken)
                 {

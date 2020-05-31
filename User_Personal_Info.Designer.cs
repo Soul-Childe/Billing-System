@@ -31,15 +31,15 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(User_Personal_Info));
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pic3 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.pic3 = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pic3)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic3)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -64,16 +64,6 @@
             this.panel1.Size = new System.Drawing.Size(790, 911);
             this.panel1.TabIndex = 1;
             // 
-            // pic3
-            // 
-            this.pic3.Image = ((System.Drawing.Image)(resources.GetObject("pic3.Image")));
-            this.pic3.Location = new System.Drawing.Point(297, 42);
-            this.pic3.Name = "pic3";
-            this.pic3.Size = new System.Drawing.Size(180, 190);
-            this.pic3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pic3.TabIndex = 0;
-            this.pic3.TabStop = false;
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
@@ -86,40 +76,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(781, 728);
             this.panel2.TabIndex = 2;
-            // 
-            // label2
-            // 
-            this.label2.Font = new System.Drawing.Font("隶书", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label2.Location = new System.Drawing.Point(3, 249);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(769, 54);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "奋斗蚂蚁";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // label3
-            // 
-            this.label3.Font = new System.Drawing.Font("隶书", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label3.Location = new System.Drawing.Point(3, 303);
-            this.label3.Name = "label3";
-            this.label3.Padding = new System.Windows.Forms.Padding(0, 10, 0, 10);
-            this.label3.Size = new System.Drawing.Size(769, 54);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "106778****@qq.com";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.SystemColors.Highlight;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("宋体", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(3, 436);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(774, 90);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "修改个人信息";
-            this.button1.UseVisualStyleBackColor = false;
             // 
             // button2
             // 
@@ -136,6 +92,51 @@
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.Highlight;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("宋体", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button1.Location = new System.Drawing.Point(3, 436);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(774, 90);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "修改个人信息";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // pic3
+            // 
+            this.pic3.Image = ((System.Drawing.Image)(resources.GetObject("pic3.Image")));
+            this.pic3.Location = new System.Drawing.Point(297, 42);
+            this.pic3.Name = "pic3";
+            this.pic3.Size = new System.Drawing.Size(180, 190);
+            this.pic3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pic3.TabIndex = 0;
+            this.pic3.TabStop = false;
+            // 
+            // label3
+            // 
+            this.label3.Font = new System.Drawing.Font("隶书", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label3.Location = new System.Drawing.Point(3, 303);
+            this.label3.Name = "label3";
+            this.label3.Padding = new System.Windows.Forms.Padding(0, 10, 0, 10);
+            this.label3.Size = new System.Drawing.Size(769, 54);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "106778****@qq.com";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("隶书", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label2.Location = new System.Drawing.Point(3, 249);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(769, 54);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "奋斗蚂蚁";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
             // User_Personal_Info
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -147,8 +148,8 @@
             this.Size = new System.Drawing.Size(790, 911);
             this.Load += new System.EventHandler(this.User_Personal_Info_Load);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pic3)).EndInit();
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pic3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

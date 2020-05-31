@@ -3,3 +3,4 @@ D:\Project\Github project\System.Model\bin\Debug\System.Model.pdb
 D:\Project\Github project\System.Model\obj\Debug\System.Model.csproj.CoreCompileInputs.cache
 D:\Project\Github project\System.Model\obj\Debug\System.Model.dll
 D:\Project\Github project\System.Model\obj\Debug\System.Model.pdb
+D:\Project\Github project\System.Model\obj\Debug\System.Model.csprojAssemblyReference.cache
