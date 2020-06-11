@@ -16,9 +16,11 @@ D:\Project\Github project\bin\Debug\MetroFramework.Fonts.dll
 D:\Project\Github project\bin\Debug\MyControls.dll
 D:\Project\Github project\bin\Debug\System.BLL.dll
 D:\Project\Github project\bin\Debug\System.Model.dll
+D:\Project\Github project\bin\Debug\System.DAL.dll
 D:\Project\Github project\bin\Debug\MyControls.pdb
 D:\Project\Github project\bin\Debug\System.BLL.pdb
 D:\Project\Github project\bin\Debug\System.Model.pdb
+D:\Project\Github project\bin\Debug\System.DAL.pdb
 D:\Project\Github project\obj\Debug\Billing-System.csprojAssemblyReference.cache
 D:\Project\Github project\obj\Debug\Billing_System.Form_Login.resources
 D:\Project\Github project\obj\Debug\Billing_System.Form2.resources
@@ -29,5 +31,3 @@ D:\Project\Github project\obj\Debug\Billing-System.csproj.CoreCompileInputs.cach
 D:\Project\Github project\obj\Debug\Billing-System.csproj.CopyComplete
 D:\Project\Github project\obj\Debug\Billing-System.exe
 D:\Project\Github project\obj\Debug\Billing-System.pdb
-D:\Project\Github project\bin\Debug\System.DAL.dll
-D:\Project\Github project\bin\Debug\System.DAL.pdb

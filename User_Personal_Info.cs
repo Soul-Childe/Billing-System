@@ -63,7 +63,7 @@ namespace Billing_System
         #region 修改个人信息
         private void button1_Click(object sender, EventArgs e)
         {
-            Process.Start("http://www.baidu.com");
+            Process.Start("https://127.0.0.1/WebPage/Register_Info.html");
         }
         #endregion
 
