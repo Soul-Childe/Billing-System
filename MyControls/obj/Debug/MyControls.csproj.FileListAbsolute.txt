@@ -1,6 +1,6 @@
 D:\Project\Github project\MyControls\bin\Debug\MyControls.dll
 D:\Project\Github project\MyControls\bin\Debug\MyControls.pdb
-D:\Project\Github project\MyControls\obj\Debug\MyControls.csprojAssemblyReference.cache
 D:\Project\Github project\MyControls\obj\Debug\MyControls.csproj.CoreCompileInputs.cache
 D:\Project\Github project\MyControls\obj\Debug\MyControls.dll
 D:\Project\Github project\MyControls\obj\Debug\MyControls.pdb
+D:\Project\Github project\MyControls\obj\Debug\MyControls.csprojAssemblyReference.cache

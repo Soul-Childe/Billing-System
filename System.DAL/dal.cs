@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Model;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -45,6 +46,40 @@ namespace System.DAL
             }
             dr.Close();
             return Modellist;
+        }
+
+        /// <summary>
+        /// 泛型T数据查询方法
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="sqls"></param>
+        /// <returns></returns>
+        public static List<T>DataQueryMethod<T>(params string[]sqls)where T :new()
+        {
+            string strsql = "select * from " + typeof(T).Name+" where 1=1 ";
+            string m_and = "";
+            foreach (string item in sqls)
+            {
+                strsql +=m_and+" "+item+" ";
+                m_and = "and";
+            }
+            List<T> modellist = new List<T>();
+            SqlDataReader dr = DBHelper.ExecuteReader(strsql);
+           PropertyInfo[] info= typeof(T).GetProperties();
+            while (dr.Read())
+            {
+                T obj = new T();
+                foreach (PropertyInfo item in info)
+                {
+                    if(dr[item.Name]!=DBNull.Value)
+                    {
+                        item.SetValue(obj, dr[item.Name]);
+                        modellist.Add(obj);
+                    }
+                }
+            }
+            dr.Close();
+            return modellist;
         }
     }
 }

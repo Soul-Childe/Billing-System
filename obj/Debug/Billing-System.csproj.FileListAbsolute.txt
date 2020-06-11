@@ -31,3 +31,7 @@ D:\Project\Github project\obj\Debug\Billing-System.csproj.CoreCompileInputs.cach
 D:\Project\Github project\obj\Debug\Billing-System.csproj.CopyComplete
 D:\Project\Github project\obj\Debug\Billing-System.exe
 D:\Project\Github project\obj\Debug\Billing-System.pdb
+D:\Project\Github project\obj\Debug\Billing_System.User_Login.resources
+D:\Project\Github project\bin\Debug\byn-ER\Billing-System.resources.dll
+D:\Project\Github project\obj\Debug\Billing_System.User_Login.byn-ER.resources
+D:\Project\Github project\obj\Debug\byn-ER\Billing-System.resources.dll

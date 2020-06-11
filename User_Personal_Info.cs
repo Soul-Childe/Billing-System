@@ -20,9 +20,22 @@ namespace Billing_System
             InitializeComponent();
         }
         #region 全局变量
+        /// <summary>
+        /// 宽度
+        /// </summary>
         public int width = 0;
+        /// <summary>
+        /// Label变量
+        /// </summary>
         public Label label;
+        /// <summary>
+        /// PictureBox变量
+        /// </summary>
         public PictureBox pictureBox;
+        /// <summary>
+        /// 容器属性
+        /// </summary>
+        public Panel panel { get; set; }
         #endregion
 
         #region 布局方法
@@ -43,15 +56,15 @@ namespace Billing_System
         private void SetPictruea()
         {
             GraphicsPath gp = new GraphicsPath();
-            gp.AddEllipse(this.pic3.ClientRectangle);
+            gp.AddEllipse(this.Pic_Headpic.ClientRectangle);
             Region region = new Region(gp);
-            this.pic3.Region = region;
+            this.Pic_Headpic.Region = region;
             gp.Dispose();
             region.Dispose();
         }
         #endregion
 
-        #region Load
+        #region 用户控件加载事件
         private void User_Personal_Info_Load(object sender, EventArgs e)
         {
             SetLayout();
@@ -61,24 +74,28 @@ namespace Billing_System
         #endregion
 
         #region 修改个人信息
-        private void button1_Click(object sender, EventArgs e)
+        private void btn_Personal_Info_Click(object sender, EventArgs e)
         {
-            Process.Start("https://127.0.0.1/WebPage/Register_Info.html");
+
         }
         #endregion
 
         #region 退出账号
-        private void button2_Click(object sender, EventArgs e)
+        private void btn_Sign_Out_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("注销此账号?", "系统提示", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                MessageBox.Show("asdf");
                 label.Text = "未登录";
-                string path = System.AppDomain.CurrentDomain.SetupInformation.ApplicationBase+"Form_pictrue\\ch06.png";
-                pictureBox.Load(path);// = Image.FromFile(path);
+                string path = System.AppDomain.CurrentDomain.SetupInformation.ApplicationBase + "Form_pictrue\\ch07.png";
+                pictureBox.Load(path);
+                panel.Controls.Clear();
+                User_Login login = new User_Login();
+                login.Dock = DockStyle.Fill;
+                panel.Controls.Add(login);
             }
         }
         #endregion
 
+       
     }
 }

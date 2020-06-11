@@ -19,18 +19,12 @@ namespace Billing_System
 
         }
 
+        #region 窗体加载事件
         private void Form1_Load(object sender, EventArgs e)
         {
-            SetPictrue(pictureBox2);            
+            SetPictrue(Pic_Head_Pic);            
         }
-
-
-        private void myButton1_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("adf");
-        }
-
-
+        #endregion 
 
         #region 设置图片框为圆形方法
         /// <summary>
@@ -46,6 +40,7 @@ namespace Billing_System
             region.Dispose();
         }
         #endregion
+
 
         private void label_Click(object sender, EventArgs e)
         {
@@ -66,16 +61,6 @@ namespace Billing_System
             } 
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-            User_Personal_Info user_Personal_Info = new User_Personal_Info();
-            user_Personal_Info.Dock = DockStyle.Fill;
-            user_Personal_Info.width = panel2.Width;
-            user_Personal_Info.label = label2;
-            user_Personal_Info.pictureBox = pictureBox2;
-            panel2.Controls.Add(user_Personal_Info);
-        }
-
         private void label_MouseMove(object sender, MouseEventArgs e)
         {
             Label label = ((Label)sender);
@@ -87,5 +72,18 @@ namespace Billing_System
             Label label = ((Label)sender);
             label.ForeColor = Color.LightGray;
         }
+
+        #region Label控件 用户名称点击事件
+        private void lab_Name_Click(object sender, EventArgs e)
+        {
+            User_Personal_Info user_Personal_Info = new User_Personal_Info();
+            user_Personal_Info.Dock = DockStyle.Fill;
+            user_Personal_Info.width = panel2.Width;
+            user_Personal_Info.label = lab_Name;
+            user_Personal_Info.pictureBox = Pic_Head_Pic;
+            user_Personal_Info.panel = panel2;
+            panel2.Controls.Add(user_Personal_Info);
+        }
+        #endregion 
     }
 }

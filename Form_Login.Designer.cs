@@ -34,14 +34,14 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.Pic_Head_Pic = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lab_Name = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pic_Head_Pic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,10 +50,10 @@
             this.panel1.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.Controls.Add(this.flowLayoutPanel1);
-            this.panel1.Controls.Add(this.pictureBox2);
+            this.panel1.Controls.Add(this.Pic_Head_Pic);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.lab_Name);
             this.panel1.Location = new System.Drawing.Point(0, 5);
             this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
@@ -121,18 +121,18 @@
             this.label5.MouseLeave += new System.EventHandler(this.label_MouseLeave);
             this.label5.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label_MouseMove);
             // 
-            // pictureBox2
+            // Pic_Head_Pic
             // 
-            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(79, 81);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(0);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(60, 60);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 2;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.label2_Click);
+            this.Pic_Head_Pic.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Pic_Head_Pic.Image = ((System.Drawing.Image)(resources.GetObject("Pic_Head_Pic.Image")));
+            this.Pic_Head_Pic.Location = new System.Drawing.Point(79, 81);
+            this.Pic_Head_Pic.Margin = new System.Windows.Forms.Padding(0);
+            this.Pic_Head_Pic.Name = "Pic_Head_Pic";
+            this.Pic_Head_Pic.Size = new System.Drawing.Size(60, 60);
+            this.Pic_Head_Pic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Pic_Head_Pic.TabIndex = 2;
+            this.Pic_Head_Pic.TabStop = false;
+            this.Pic_Head_Pic.Click += new System.EventHandler(this.lab_Name_Click);
             // 
             // label1
             // 
@@ -157,19 +157,19 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // label2
+            // lab_Name
             // 
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label2.Font = new System.Drawing.Font("微软雅黑", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(0, 139);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(222, 36);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "奋斗蚂蚁";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.lab_Name.BackColor = System.Drawing.Color.Transparent;
+            this.lab_Name.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lab_Name.Font = new System.Drawing.Font("微软雅黑", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lab_Name.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lab_Name.Location = new System.Drawing.Point(0, 139);
+            this.lab_Name.Name = "lab_Name";
+            this.lab_Name.Size = new System.Drawing.Size(222, 36);
+            this.lab_Name.TabIndex = 3;
+            this.lab_Name.Text = "奋斗蚂蚁";
+            this.lab_Name.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lab_Name.Click += new System.EventHandler(this.lab_Name_Click);
             // 
             // panel2
             // 
@@ -199,7 +199,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pic_Head_Pic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -210,8 +210,8 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox Pic_Head_Pic;
+        private System.Windows.Forms.Label lab_Name;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;

@@ -72,6 +72,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="User_Login.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User_Login.Designer.cs">
+      <DependentUpon>User_Login.cs</DependentUpon>
+    </Compile>
     <Compile Include="User_Personal_Info.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -93,6 +99,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="User_Login.byn-ER.resx">
+      <DependentUpon>User_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User_Login.resx">
+      <DependentUpon>User_Login.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="User_Personal_Info.resx">
       <DependentUpon>User_Personal_Info.cs</DependentUpon>
     </EmbeddedResource>
@@ -133,6 +145,7 @@
     <Content Include="Form_pictrue\ch05.png" />
     <Content Include="Form_pictrue\ch06.jpg" />
     <Content Include="Form_pictrue\ch06.png" />
+    <Content Include="Form_pictrue\ch07.png" />
     <Content Include="Form_pictrue\man.png" />
     <Content Include="logo.ico" />
   </ItemGroup>

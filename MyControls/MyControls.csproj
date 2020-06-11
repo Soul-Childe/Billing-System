@@ -50,6 +50,12 @@
       <DependentUpon>Mybutton.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TriangleButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TriangleButton.Designer.cs">
+      <DependentUpon>TriangleButton.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -20,5 +20,15 @@ namespace System.BLL
         {
             return dal.Register_info_Query(sqls);
         }
+        /// <summary>
+        /// 泛型T数据查询方法
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="vs"></param>
+        /// <returns></returns>
+        public static List<T> DataQueryMethod<T>(params string[]vs)where T:new ()
+        {
+            return dal.DataQueryMethod<T>(vs);
+        }
     }
 }
