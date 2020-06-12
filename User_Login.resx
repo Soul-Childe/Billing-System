@@ -148,7 +148,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;text_Uid.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="text_pwd.Font" type="System.Drawing.Font, System.Drawing">
     <value>宋体, 18pt</value>
@@ -178,43 +178,43 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;text_pwd.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
-  <data name="checkBox1.AutoSize" type="System.Boolean, mscorlib">
+  <data name="check_Aoto_Login.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="checkBox1.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="check_Aoto_Login.Font" type="System.Drawing.Font, System.Drawing">
     <value>宋体, 12pt</value>
   </data>
-  <data name="checkBox1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="check_Aoto_Login.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="checkBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>293, 325</value>
+  <data name="check_Aoto_Login.Location" type="System.Drawing.Point, System.Drawing">
+    <value>293, 339</value>
   </data>
-  <data name="checkBox1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="check_Aoto_Login.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>1, 1, 1, 1</value>
   </data>
-  <data name="checkBox1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="check_Aoto_Login.Size" type="System.Drawing.Size, System.Drawing">
     <value>111, 24</value>
   </data>
-  <data name="checkBox1.TabIndex" type="System.Int32, mscorlib">
+  <data name="check_Aoto_Login.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
   </data>
-  <data name="checkBox1.Text" xml:space="preserve">
+  <data name="check_Aoto_Login.Text" xml:space="preserve">
     <value>自动登录</value>
   </data>
-  <data name="&gt;&gt;checkBox1.Name" xml:space="preserve">
-    <value>checkBox1</value>
+  <data name="&gt;&gt;check_Aoto_Login.Name" xml:space="preserve">
+    <value>check_Aoto_Login</value>
   </data>
-  <data name="&gt;&gt;checkBox1.Type" xml:space="preserve">
+  <data name="&gt;&gt;check_Aoto_Login.Type" xml:space="preserve">
     <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;checkBox1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;check_Aoto_Login.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;checkBox1.ZOrder" xml:space="preserve">
-    <value>5</value>
+  <data name="&gt;&gt;check_Aoto_Login.ZOrder" xml:space="preserve">
+    <value>6</value>
   </data>
   <data name="linkLabel1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -223,7 +223,7 @@
     <value>NoControl</value>
   </data>
   <data name="linkLabel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>574, 326</value>
+    <value>574, 340</value>
   </data>
   <data name="linkLabel1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>1, 0, 1, 0</value>
@@ -247,7 +247,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;linkLabel1.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="btn_Sign_in.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -259,7 +259,7 @@
     <value>NoControl</value>
   </data>
   <data name="btn_Sign_in.Location" type="System.Drawing.Point, System.Drawing">
-    <value>291, 378</value>
+    <value>291, 392</value>
   </data>
   <data name="btn_Sign_in.Size" type="System.Drawing.Size, System.Drawing">
     <value>375, 48</value>
@@ -280,7 +280,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btn_Sign_in.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="lab_Uid_Tips.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -310,7 +310,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lab_Uid_Tips.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="lab_Pwd_Tips.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -340,7 +340,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lab_Pwd_Tips.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <metadata name="metroContextMenu1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
@@ -349,7 +349,7 @@
     <value>False</value>
   </data>
   <data name="metroContextMenu1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>298, 156</value>
+    <value>298, 30</value>
   </data>
   <data name="&gt;&gt;metroContextMenu1.Name" xml:space="preserve">
     <value>metroContextMenu1</value>
@@ -382,6 +382,36 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btn_UId.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="lab_Error_Tips.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lab_Error_Tips.Location" type="System.Drawing.Point, System.Drawing">
+    <value>293, 310</value>
+  </data>
+  <data name="lab_Error_Tips.Size" type="System.Drawing.Size, System.Drawing">
+    <value>229, 20</value>
+  </data>
+  <data name="lab_Error_Tips.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="lab_Error_Tips.Text" xml:space="preserve">
+    <value>您输入的账号或密码错误</value>
+  </data>
+  <data name="lab_Error_Tips.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;lab_Error_Tips.Name" xml:space="preserve">
+    <value>lab_Error_Tips</value>
+  </data>
+  <data name="&gt;&gt;lab_Error_Tips.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lab_Error_Tips.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lab_Error_Tips.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">

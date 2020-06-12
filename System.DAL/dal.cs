@@ -20,7 +20,7 @@ namespace System.DAL
         public static List<register_info> Register_info_Query(params SqlParameter[] sqls)
         {
             string strsql = "select * from register_info";
-            List<register_info> Modellist = new List<register_info>();          
+            List<register_info> Modellist = new List<register_info>();
             SqlDataReader dr = DBHelper.ExecuteReader(strsql, sqls);
             while (dr.Read())
             {
@@ -54,32 +54,66 @@ namespace System.DAL
         /// <typeparam name="T"></typeparam>
         /// <param name="sqls"></param>
         /// <returns></returns>
-        public static List<T>DataQueryMethod<T>(params string[]sqls)where T :new()
+        public static List<T> DataQueryMethod<T>(params string[] sqls) where T : new()
         {
-            string strsql = "select * from " + typeof(T).Name+" where 1=1 ";
+            string strsql = "select * from " + typeof(T).Name + " where 1=1 ";
             string m_and = "";
             foreach (string item in sqls)
             {
-                strsql +=m_and+" "+item+" ";
+                strsql += m_and + " " + item + " ";
                 m_and = "and";
             }
             List<T> modellist = new List<T>();
             SqlDataReader dr = DBHelper.ExecuteReader(strsql);
-           PropertyInfo[] info= typeof(T).GetProperties();
+            PropertyInfo[] info = typeof(T).GetProperties();
             while (dr.Read())
             {
                 T obj = new T();
                 foreach (PropertyInfo item in info)
                 {
-                    if(dr[item.Name]!=DBNull.Value)
+                    if (dr[item.Name] != DBNull.Value)
                     {
                         item.SetValue(obj, dr[item.Name]);
-                        modellist.Add(obj);
+
                     }
                 }
+                modellist.Add(obj);
             }
             dr.Close();
             return modellist;
+        }
+        /// <summary>
+        /// T 数据查询方法
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="vs"></param>
+        /// <returns></returns>
+        public static T DataQuery<T>(params string[] vs) where T : new()
+        {
+            string strsql="select * from "+ typeof(T).Name + " where 1=1 ";
+            string m_and = "";
+            foreach (string item in vs)
+            {
+                strsql += m_and + " " + item + " ";
+                m_and = "and";
+            }          
+            SqlDataReader dr = DBHelper.ExecuteReader(strsql);
+            PropertyInfo[] info = typeof(T).GetProperties();
+            T obj = default(T);
+            while (dr.Read())
+            {
+                obj= new T();
+                foreach (PropertyInfo item in info)
+                {
+                    if (dr[item.Name] != DBNull.Value)
+                    {
+                        item.SetValue(obj, dr[item.Name]);
+
+                    }
+                }               
+            }
+            dr.Close();
+            return obj;
         }
     }
 }

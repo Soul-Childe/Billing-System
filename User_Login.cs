@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Model;
 using System.BLL;
+using System.Xml;
+using System.Configuration;
 
 namespace Billing_System
 {
@@ -22,6 +24,28 @@ namespace Billing_System
             text_Uid.GotFocus += TextBox_GotFocus;
             text_pwd.GotFocus += TextBox_GotFocus;
         }
+        #region 全局变量
+        /// <summary>
+        /// LoginConfig配置文件路径
+        /// </summary>
+        string path = Application.StartupPath + "\\LoginConfig.xml";
+        /// <summary>
+        /// LoginConfig配置文件元素对象
+        /// </summary>
+        XmlDocument document = new XmlDocument();
+        /// <summary>
+        /// LoginConfig配置文件Login节点
+        /// </summary>
+        XmlNode login = null;
+        /// <summary>
+        /// 密码
+        /// </summary>
+        string pwd;
+        /// <summary>
+        /// 是否为输入密码
+        /// </summary>
+        bool istrue;
+        #endregion
 
         #region 文本框失去焦点事件
         private void TextBox_LostFocus(object sender, EventArgs e)
@@ -76,11 +100,21 @@ namespace Billing_System
         private void User_Login_Load(object sender, EventArgs e)
         {            
             btn_Sign_in.BackColor = Color.FromArgb(98,Color.DodgerBlue);
-            for (int i = 0; i < 3; i++)
+          //  XmlDocument document = new XmlDocument();
+            document.Load(path);
+            login = document.SelectSingleNode("root").SelectSingleNode("Login");
+            foreach (XmlNode item in login.ChildNodes)
             {
-                metroContextMenu1.Items.Add("aaaaaaaaaaaaaa").AutoSize=false;
-                metroContextMenu1.Items[i].Width = 298;
-                metroContextMenu1.Items[i].Click += ContetextMenu_Click;
+                ToolStripMenuItem toolStrip = new ToolStripMenuItem();
+                toolStrip.Text = item.FirstChild.InnerText;
+                toolStrip.AutoSize = false;
+                toolStrip.Width = 298;
+                toolStrip.Height = 30;
+                toolStrip.Font = new Font("黑体",18);
+                toolStrip.Click += ContetextMenu_Click;
+                metroContextMenu1.Items.Add(toolStrip);
+                metroContextMenu1.Height += toolStrip.Height;
+
             }
         }
         #endregion
@@ -90,8 +124,26 @@ namespace Billing_System
         {
            ToolStripMenuItem menu = (ToolStripMenuItem)sender;
             text_Uid.Text = menu.Text;
+            //便利login下的所有row节点
+            foreach (XmlNode item in login.ChildNodes)
+            {
+                if(item.FirstChild.InnerText==menu.Text)
+                {
+                    for (int i = 0; i < int.Parse(item.ChildNodes[2].InnerText); i++)
+                    {
+                        text_pwd.Text += "*";
+                    }
+                    pwd = item.ChildNodes[1].InnerText;
+                    istrue = true;
+                }
+            }
             if (text_Uid.Text.Length > 0)
+            {
                 lab_Uid_Tips.Visible = false;
+                lab_Pwd_Tips.Visible = false;
+                btn_Sign_in.Enabled = true;
+                btn_Sign_in.BackColor = Color.DodgerBlue;
+            }
         }
         #endregion 
 
@@ -104,6 +156,8 @@ namespace Billing_System
                 lab_Pwd_Tips.Visible = text_pwd.Text.Length > 0 ? false : true;
                 btn_Sign_in.BackColor = Color.DodgerBlue;
                 btn_Sign_in.Enabled = true;
+                if (istrue == false)
+                    pwd = bll.MD5Encryption(text_pwd.Text);
             }
             else
             {
@@ -123,7 +177,53 @@ namespace Billing_System
         #region 登录
         private void btn_Sign_in_Click(object sender, EventArgs e)
         {
-            List<register_info> list = bll.DataQueryMethod<register_info>();
+            string[] vs = new string[] { " and (phone='"+text_Uid.Text+"' or email='"+ text_Uid.Text+"') and [password]='"+pwd+"' " };
+            register_info info = bll.DataQuery<register_info>(vs);
+            if(info!=null)
+            {
+                //自动登录
+                if (check_Aoto_Login.Checked == true)
+                {
+                    try
+                    {
+                        foreach (XmlNode item in login.ChildNodes)
+                        {
+                            //当前为row节点
+                            if (item.FirstChild.InnerText == text_Uid.Text)
+                            {
+                                login.RemoveChild(item);
+                                document.Save(path);
+                            }
+                        }
+                        //添加row节点
+                        XmlNode row = document.CreateElement("row");
+                        XmlNode uid = document.CreateElement("uid");
+                        XmlNode pwd = document.CreateElement("pwd");
+                        XmlNode pwdLen = document.CreateElement("pwdLen");
+                        XmlNode date = document.CreateElement("date");
+                        uid.InnerText = text_Uid.Text;
+                        pwd.InnerText = bll.MD5Encryption(text_pwd.Text);
+                        pwdLen.InnerText = text_pwd.Text.Length.ToString();
+                        date.InnerText = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+                        row.AppendChild(uid);
+                        row.AppendChild(pwd);
+                        row.AppendChild(pwdLen);
+                        row.AppendChild(date);
+                        login.AppendChild(row);
+                        document.Save(path);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                        return;
+                    }                 
+                }
+            }
+            else
+            {
+                lab_Error_Tips.Visible = true;
+            }
+          
 
         }
         #endregion 
