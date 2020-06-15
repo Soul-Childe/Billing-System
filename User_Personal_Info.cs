@@ -91,6 +91,7 @@ namespace Billing_System
                 panel.Controls.Clear();
                 User_Login login = new User_Login();
                 login.Dock = DockStyle.Fill;
+                login.panel = panel;
                 panel.Controls.Add(login);
             }
         }

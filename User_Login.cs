@@ -45,6 +45,10 @@ namespace Billing_System
         /// 是否为输入密码
         /// </summary>
         bool istrue;
+        /// <summary>
+        /// 容器控件
+        /// </summary>
+        public Panel panel { get; set; }
         #endregion
 
         #region 文本框失去焦点事件
@@ -100,7 +104,6 @@ namespace Billing_System
         private void User_Login_Load(object sender, EventArgs e)
         {            
             btn_Sign_in.BackColor = Color.FromArgb(98,Color.DodgerBlue);
-          //  XmlDocument document = new XmlDocument();
             document.Load(path);
             login = document.SelectSingleNode("root").SelectSingleNode("Login");
             foreach (XmlNode item in login.ChildNodes)
@@ -124,6 +127,7 @@ namespace Billing_System
         {
            ToolStripMenuItem menu = (ToolStripMenuItem)sender;
             text_Uid.Text = menu.Text;
+            text_pwd.Text = "";
             //便利login下的所有row节点
             foreach (XmlNode item in login.ChildNodes)
             {
@@ -218,10 +222,19 @@ namespace Billing_System
                         return;
                     }                 
                 }
+                panel.Controls.Clear();
+                User_Personal_Info user_Personal_Info = new User_Personal_Info();
+                user_Personal_Info.Dock = DockStyle.Fill;
+                user_Personal_Info.width = panel.Width;
+                //user_Personal_Info.label = lab_Name;
+               // user_Personal_Info.pictureBox = Pic_Head_Pic;
+                //user_Personal_Info.panel = panel2;
+                panel.Controls.Add(user_Personal_Info);
             }
             else
             {
                 lab_Error_Tips.Visible = true;
+                return;
             }
           
 
