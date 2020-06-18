@@ -13,7 +13,7 @@ namespace System.Model
     {
         /// <summary>
         /// 用户信息对象
-        /// </summary>
+        /// </summary> 
         public static register_info user_Info;
     }
 }
