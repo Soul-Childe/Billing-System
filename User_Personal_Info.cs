@@ -11,6 +11,7 @@ using System.Drawing.Drawing2D;
 using System.BLL;
 using System.Diagnostics;
 using System.Model;
+using Microsoft.Win32;
 
 namespace Billing_System
 {
@@ -81,7 +82,10 @@ namespace Billing_System
         #region 修改个人信息
         private void btn_Personal_Info_Click(object sender, EventArgs e)
         {
-
+            string path = @"https://localhost:44392/WebPage/Register_Info.html";
+            //Registry.s.OpenSubKey(@"https://www.cnblogs.com/glzgc/p/7940494.html");
+          //  Process.Start(@"https://www.cnblogs.com/glzgc/p/7940494.html");
+            Process.Start(path);
         }
         #endregion
 
