@@ -7,10 +7,13 @@ using System.Threading.Tasks;
 namespace System.Model
 {
     /// <summary>
-    /// 控件对象类
+    /// 登录的用户类
     /// </summary>
-    public class MyControls
+    public class Login_User
     {
-
+        /// <summary>
+        /// 用户信息对象
+        /// </summary>
+        public static register_info user_Info;
     }
 }

@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Drawing.Drawing2D;
 using System.BLL;
 using System.Diagnostics;
+using System.Model;
 
 namespace Billing_System
 {
@@ -27,11 +28,11 @@ namespace Billing_System
         /// <summary>
         /// Label变量
         /// </summary>
-        public Label label;
+        //public Label label;
         /// <summary>
         /// PictureBox变量
         /// </summary>
-        public PictureBox pictureBox;
+        //public PictureBox pictureBox;
         /// <summary>
         /// 容器属性
         /// </summary>
@@ -69,7 +70,11 @@ namespace Billing_System
         {
             SetLayout();
             SetPictruea();
-
+            if (Login_User.user_Info != null)
+            {
+                lab_Name.Text = Login_User.user_Info.user_name;
+                lab_Email.Text = Login_User.user_Info.email;
+            }
         }
         #endregion
 
@@ -85,14 +90,13 @@ namespace Billing_System
         {
             if (MessageBox.Show("注销此账号?", "系统提示", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                label.Text = "未登录";
+                MyControl.lab_Name.Text = "未登录";
                 string path = System.AppDomain.CurrentDomain.SetupInformation.ApplicationBase + "Form_pictrue\\ch07.png";
-                pictureBox.Load(path);
-                panel.Controls.Clear();
+                MyControl.Pic_Head_Pic.Load(path);
                 User_Login login = new User_Login();
                 login.Dock = DockStyle.Fill;
-                login.panel = panel;
-                panel.Controls.Add(login);
+                MyControl.panel.Controls.Clear();
+                MyControl.panel.Controls.Add(login);
             }
         }
         #endregion

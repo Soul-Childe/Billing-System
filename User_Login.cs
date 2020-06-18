@@ -182,8 +182,8 @@ namespace Billing_System
         private void btn_Sign_in_Click(object sender, EventArgs e)
         {
             string[] vs = new string[] { " and (phone='"+text_Uid.Text+"' or email='"+ text_Uid.Text+"') and [password]='"+pwd+"' " };
-            register_info info = bll.DataQuery<register_info>(vs);
-            if(info!=null)
+            Login_User.user_Info = bll.DataQuery<register_info>(vs);
+            if(Login_User.user_Info != null)
             {
                 //自动登录
                 if (check_Aoto_Login.Checked == true)
@@ -222,14 +222,15 @@ namespace Billing_System
                         return;
                     }                 
                 }
-                panel.Controls.Clear();
+                string PicPath = System.AppDomain.CurrentDomain.SetupInformation.ApplicationBase + "Form_pictrue\\ch06.jpg";
+                MyControl.panel.Controls.Clear();
                 User_Personal_Info user_Personal_Info = new User_Personal_Info();
                 user_Personal_Info.Dock = DockStyle.Fill;
-                user_Personal_Info.width = panel.Width;
-                //user_Personal_Info.label = lab_Name;
-               // user_Personal_Info.pictureBox = Pic_Head_Pic;
-                //user_Personal_Info.panel = panel2;
-                panel.Controls.Add(user_Personal_Info);
+                user_Personal_Info.width = MyControl.panel.Width;
+                MyControl.lab_Name.Text = Login_User.user_Info.user_name;
+                MyControl.Pic_Head_Pic.Load(PicPath);
+                MyControl.panel.Controls.Add(user_Personal_Info);
+              
             }
             else
             {

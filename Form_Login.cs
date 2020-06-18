@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Linq;
+using System.Model;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -22,7 +23,27 @@ namespace Billing_System
         #region 窗体加载事件
         private void Form1_Load(object sender, EventArgs e)
         {
-            SetPictrue(Pic_Head_Pic);            
+            SetPictrue(Pic_Head_Pic);
+            if (Login_User.user_Info != null)//已登陆
+            {
+                User_Personal_Info user_Personal_Info = new User_Personal_Info();
+                user_Personal_Info.Dock = DockStyle.Fill;
+                user_Personal_Info.width = panel2.Width;
+                MyControl.lab_Name = lab_Name;
+                MyControl.panel = panel2;
+                MyControl.Pic_Head_Pic = Pic_Head_Pic;
+                panel2.Controls.Add(user_Personal_Info);
+            }
+            else//未登录
+            {
+                User_Login login = new User_Login();
+                login.Dock = DockStyle.Fill;
+                login.Width = panel2.Width;
+                MyControl.lab_Name = lab_Name;
+                MyControl.panel = panel2;
+                MyControl.Pic_Head_Pic = Pic_Head_Pic;
+                panel2.Controls.Add(login);
+            }
         }
         #endregion 
 
@@ -76,13 +97,27 @@ namespace Billing_System
         #region Label控件 用户名称点击事件
         private void lab_Name_Click(object sender, EventArgs e)
         {
-            User_Personal_Info user_Personal_Info = new User_Personal_Info();
-            user_Personal_Info.Dock = DockStyle.Fill;
-            user_Personal_Info.width = panel2.Width;
-            user_Personal_Info.label = lab_Name;
-            user_Personal_Info.pictureBox = Pic_Head_Pic;
-            user_Personal_Info.panel = panel2;
-            panel2.Controls.Add(user_Personal_Info);
+            panel2.Controls.Clear();
+            if (Login_User.user_Info != null)//已登陆
+            {
+                User_Personal_Info user_Personal_Info = new User_Personal_Info();
+                user_Personal_Info.Dock = DockStyle.Fill;
+                user_Personal_Info.width = panel2.Width;
+                MyControl.lab_Name = lab_Name;
+                MyControl.panel = panel2;
+                MyControl.Pic_Head_Pic = Pic_Head_Pic;
+                panel2.Controls.Add(user_Personal_Info);
+            }
+            else//未登录
+            {
+                User_Login login = new User_Login();
+                login.Dock = DockStyle.Fill;
+                login.Width = panel2.Width;
+                MyControl.lab_Name = lab_Name;
+                MyControl.panel = panel2;
+                MyControl.Pic_Head_Pic = Pic_Head_Pic;
+                panel2.Controls.Add(login);
+            }
         }
         #endregion 
     }
